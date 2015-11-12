@@ -1,5 +1,5 @@
 /*
-Esercizio 1///
+Esercizio 1///// + 7 + 10
 Dato un array di interi, restituire la loro somma fino a che non viene ritrovato un valore negativo
 */
 // Iterative
@@ -122,7 +122,7 @@ function es3(array2){
 
 
 function es3r(myarray) {
-    if (myarray.length == 0 ) {
+    if (myarray.length <= 0 ) {
         return 0;
     } else {
         return myarray[0]/10 + es3r(myarray.slice(1));
@@ -168,7 +168,6 @@ if(b < a){
  
  }
 
-
 for(;a <= b;a++){
 
  somma += a;
@@ -185,9 +184,18 @@ return somma;
 function es4r(a,b){
     if(b==a){
         return b;
-    }else{
-        return a+(es4r(a+1,b));
     }
+
+    if(b<a){
+ c = b;
+ f = a;
+ a = c; 
+ b = f;
+
+    }
+
+        return a+(es4r(a+1,b));
+    
 
 }
 
@@ -261,3 +269,146 @@ function ex_5_I(a,b){
 function ex_5_R(a,b){
     return es5r(a,b);
 }
+
+
+/*
+ESERCIZIO 7
+
+Si calcoli la potenza (x^y) di due numeri x y maggiori o uguali a zero, tramite l’utilizzo dei soli
+
+operatori somma, sottrazione e della funzione mult.
+
+Esempio:
+
+pow(2, 3) => 8
+
+
+*/
+
+// Iterative
+// Spazio: o(1)
+// Tempo:  o(n) 
+
+
+
+      function es7i(a,b){
+      
+      potenza=1;
+
+      for(i=0;i<b;i++)
+      {
+      potenza *=a;
+      }
+
+      return potenza;
+                        }
+
+// Ricorsive
+// Spazio: o(n)
+// Tempo:  o(n)                         
+
+
+      function es7r(a,b){
+
+        if(b==0){
+
+        potenza =1;
+
+        return potenza;
+
+        }else{
+        return potenza=a*es7r(a,b-1);
+        }
+
+
+                          }
+
+
+//Per Tiziano
+
+function ex_7_I(a,b){
+    return es7i(a,b);
+ 
+}
+
+function ex_7_R(a,b){
+   return es7r(a,b);
+}
+
+
+
+
+/*
+Esercizio 10
+
+Dati due interi a, n maggiori di 0, scrivere un algoritmo che crea un lista di n elementi
+
+contenenti a.
+
+Esempio:
+
+replicate(3, 4) => A= {3, 3, 3, 3}
+
+
+*/
+
+
+// Iterative
+// Spazio: o(1)
+// Tempo:  o(n) 
+
+
+
+    function es10i(a,b){
+
+      array=[];
+
+      for(i=0;i<b;i++)
+
+      {
+        array[i]=a;
+      }
+       return array;
+      }
+
+
+
+
+
+//Per Tiziano
+
+function ex_10_I(a,b){
+    return es10i(a,b);
+ 
+}
+
+function ex_10_R(a,b){
+
+     array=[];
+
+    return es10r(array,a,b);
+}
+
+
+
+// Ricorsive
+// Spazio: o(n)
+// Tempo:  o(n) 
+
+
+
+function es10r(array,a,b){
+    if(b==0){
+        return array;
+
+    
+}else{
+    array.push(a);
+    return es10r(array,a,b-1);
+}
+}
+
+
+
+
+                        
