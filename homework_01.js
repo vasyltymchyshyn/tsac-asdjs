@@ -1,5 +1,5 @@
-/*
-Esercizio 1///// + 7 + 10
+/*// modficato il 3
+Esercizio 1///// + 7 + 10////
 Dato un array di interi, restituire la loro somma fino a che non viene ritrovato un valore negativo
 */
 // Iterative
@@ -121,13 +121,20 @@ function es3(array2){
 // Tempo: o(n)
 
 
+function es3rr(myarray){
+
 function es3r(myarray) {
     if (myarray.length <= 0 ) {
         return 0;
     } else {
-        return myarray[0]/10 + es3r(myarray.slice(1));
+        return myarray[0] + es3r(myarray.slice(1));
     }
 }
+
+return es3r(myarray)/myarray.length;
+}
+
+
 
 //Per tiziano
 
@@ -136,7 +143,7 @@ function ex_3_I(array){
 }
 
 function ex_3_R(array){
-    return es3r(array);
+    return es3rr(array);
 }
 
 
