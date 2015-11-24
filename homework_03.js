@@ -23,7 +23,7 @@ Stack.prototype.isEmpty = function() {
 
 
 
-function binary(n){
+function dec2bin(n){
   
 
     var s1 = new Stack();
