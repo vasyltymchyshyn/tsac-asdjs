@@ -40,7 +40,7 @@ function binary(n){
         var stringa='';
         while(s1.isEmpty() !=true){
 
-        sstringa+=s1.pop().toString();
+        stringa+=s1.pop().toString();
 
 
 }
