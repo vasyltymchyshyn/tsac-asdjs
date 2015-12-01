@@ -1,11 +1,11 @@
 
 // ..
-function es_1_R_Somma(array){
+function ex_1a(array){
 
      if(array.length==0){
          return 10;
      }else{
-        return 5 * array[0]+ es_1_R_Somma(array.slice(1));  
+        return 5 * array[0]+ ex_1(array.slice(1));  
      }
  }
 
@@ -22,7 +22,7 @@ function es_1_Somma_Quadranti(array){
   return somma;
 }
 
-function es_1_R_Somma_Quadranti(array){
+function ex_1b(array){
   var somma;
   var i;
     
@@ -35,13 +35,13 @@ function es_1_R_Somma_Quadranti(array){
       i=array[0]*array[0];
       array[0]=i;
     }
-    return somma= array[0]+es_1_R_Somma_Quadranti(array.slice(1));
+    return somma= array[0]+ex_1a(array.slice(1));
   }
 
 
 }
 //
- function es_2_f(n) {
+ function ex_2(n) {
     return n.filter(x => x % 2 == 0).map(function(num){return num*num;}).reduce((acc, x) => acc+x,0);
 }
  
@@ -81,7 +81,7 @@ Stack.prototype.isEmpty = function() {
 
 
 
- function es_3(array){
+ function ex_3(array){
 
    var moltiplicazione=0;
    var uscita=false;
