@@ -1,5 +1,5 @@
 
-
+// ..
 function es_1_R_Somma(array){
 
      if(array.length==0){
@@ -40,7 +40,7 @@ function es_1_R_Somma_Quadranti(array){
 
 
 }
-
+//
  function es_2_f(n) {
     return n.filter(x => x % 2 == 0).map(function(num){return num*num;}).reduce((acc, x) => acc+x,0);
 }
